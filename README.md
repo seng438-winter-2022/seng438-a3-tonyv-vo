@@ -10,4 +10,4 @@ In order to do this, extract all the JAR files from [Reference Library](Referenc
 ## Deliverables
 - [JFreeChart Unit Tests](JFreeChartLab3/src/org/jfree/data/test)
 - [Lab Report](Assignment3-LabReport.md) 
-- [Reference Library](Referenced%20Libraries/)
+- [Referenced Library](Referenced%20Libraries/)
