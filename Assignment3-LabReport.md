@@ -157,7 +157,7 @@ The pros and cons of both tools are shown below:
   </tr>
 </table>
 
-**Final metrics: **
+**Final reported metrics:**
 
 Statement coverage:
 * Range: 90.5%
@@ -176,23 +176,23 @@ Method coverage:
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
-Requirements-based test generation is a black box principle. Simply put, it is generating your tests knowing the requirements of the source code and does not require you to actually see the source code. 
+Requirements-based test generation is a black-box principle. Simply put, it is generating your tests knowing the requirements and expected outputs of the source code and does not require you to actually see the source code. 
 
 **Advantages**
-- Easier to plan, requires a simple understanding of the requirements/goals of the function being tested
+- Easier to plan, requires a simple understanding of the requirements and goals of the function being tested
 - It is explicit since the tests will be determined from formulas 
 - They can be planned in advance of the actual code being finished 
 - Boundary value tests catch errors
 
 **Disadvantages**
-- Easy to miss important aspects of the program like security
+- Easy to miss important aspects of the program, such as security
 - Doesn’t check specific code segments
 - Won’t check the program line by line 
 - Test cases can be difficult to design for complicated systems 
 - Number of test cases can become large for complicated functions 
 - Limited knowledge of a programs inner workings may affect the quality of the tests
 
-Coverage-based test generation is a white box principle. It is generating tests from the actual source code, 
+Coverage-based test generation is a white-box principle. It is generating tests from the actual source code.
 
 **Advantages**
 - Can check the program line by line for max coverage
@@ -207,35 +207,35 @@ Coverage-based test generation is a white box principle. It is generating tests 
 - Can have the number of tests grow exponentially
 - Can have errors
 
-Each method has its pros and cons. In this assignment, we used the test suite from assignment 2 and added to it to reach our coverage goals. It demonstrated how both methods can be more efficient when used together. We also noticed that a lot of methods derived from black-box principles were also derived from white box principles. This showed the overlap in methods and how they each relate to the concept of testing. 
+Each method has its advantages and disadvantages. In this assignment, we used the test suite from Assignment 2 and added to it to reach our coverage goals. It demonstrated how both methods can be more efficient when used together. We also noticed that a lot of methods derived from black-box principles were also derived from white-box principles. This showed the overlap in methods and how they each relate to the concept of testing. 
 
 # 8 A discussion on how the team work/effort was divided and managed
 
-The lab was simpler to follow than previous labs and therefore was easier to split up among the teammates.
+The lab was simpler to follow than previous labs and therefore it was easier to split up among our group members.
 Section 3.1 was completed as a team as it involved understanding the coverage tools and was important for each team member to understand. As a group, we went through the suggested testing tools such as EclEmma, CodeCover, Clover, etc. We didn’t spend a lengthy amount of time on this section but once we felt we understood the assignment we split up the work for the remaining two sections.
 Chace and Chad worked on the data flow graphs and calculations for the testing methods found in the “Manual data-flow coverage calculations” section of this document. This was section 3.2 in the lab report document.
-Section 3.3 was taken by Tony. This section involved making sure all the tests we worked on in lab 2 met the minimum coverage criteria. He also determined which coverage metric we already had and which we needed to meet by writing more tests.
-Once we determined what our Lab 2 tests gave us for coverage, we split up the methods we hadn’t already tested and wrote unit tests for them. We made sure to constantly check the coverage and once we reached the goals of 90% statement coverage, 70% branch coverage and 60% Method coverage in both the Range class and DataUtilities class we stopped writing tests and reported our results in the lab document.
+Section 3.3 was initially taken by Tony. This section involved making sure all the tests we worked on in Assignment 2 met the minimum coverage criteria. He also determined which coverage metric we already had and which we needed to meet by writing more tests.
+Once we determined what our Assignment 2 tests gave us for coverage, we split up the methods we hadn’t already tested and wrote unit tests for them. We made sure to constantly check the coverage and once we reached the goals of 90% statement coverage, 70% branch coverage, and 60% method coverage in both the Range class and DataUtilities class, we stopped writing tests and reported our results in the lab document.
 When writing the tests we made sure to keep the source code in mind so we could write tests that had the coverage we were looking for. We made sure to use white-box methods to create our new test cases.
-Most of our old tests met the coverage criteria needed but we were able to update some of the old test cases to maximise the coverage. 
+Most of our old tests met the coverage criteria needed but we were able to update some of the old test cases to maximise the coverage (as given at the bottom of [Appendix A](#appendix-a-full-test-suite-of-assignment-3)). 
 Although we worked separately for certain sections, the group spent a lot of time working on the lab together to ensure we had a decent understanding of the whole assignment.
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-This lab contains a few difficulties for the group to overcome. The first was to figure out which coverage tool or tools we needed to use. All the members of our group were unfamiliar with the concept of coverage tools and needed to become acquainted with them before we could do much. We did ultimately figure out which tools worked well for the lab, which didn't work for it and which weren’t functional. It did provide us with the context to understand why these tools are important and why understanding them makes testing much easier.
+This assignment contains a few difficulties for our group to overcome. The first was to figure out which coverage tool or tools we needed to use. All the members of our group were unfamiliar with the concept of coverage tools and needed to become acquainted with them before we could improve the coverage score. We did ultimately figure out which tools worked well for the assignment, which didn't work, and which were not functional or were outdated. It did provide us with the context to understand why these tools are important and why understanding them makes testing much easier.
 
-Setting up the group work felt a bit more difficult in this lab, as some of the sections were smaller and more focused. It did help us to understand how to split up group work in a lab with fewer sections and taught us the importance of having a good understanding of the work to be done. The diagrams were made by only two members as we only needed to make two of them. We were able to discuss the diagrams so that all group members understood them.
-The condition coverage metric didn’t show up in any of the coverage tools available to us. We decided to focus on method coverage instead to have more information shown in our results. After this decision, we were able to make tests to meet the criteria of  90% statement coverage, 70% branch coverage and 60% Method coverage.
-Another interesting detail we noticed was that getCentralValue() in the range class has a defect in the source code and even with good tests we always get a failing test.
+Setting up the group work felt a bit more difficult in this lab, as some of the sections were smaller and more focused. It did help us to understand how to split up group work in an assignment with fewer sections and taught us the importance of having a good understanding of the work to be done. The diagrams were made by only two members as we only needed to make two of them. We were able to discuss the diagrams so that all group members understood them.
+The condition coverage metric didn’t show up in any of the coverage tools available to us. We decided to focus on method coverage instead to have more information shown in our results. After this decision, we were able to make tests to meet the criteria of 90% statement coverage, 70% branch coverage, and 60% method coverage.
+Another interesting detail we noticed was that getCentralValue() in the range class has a defect in the source code and even with proper tests, we always get a failing test. Therefore, running the our tests will always result in one error originating from this method.
 
-Lastly, we had learned that our previous tests didn’t cover all statements that we had previously had thought when throwing exceptions. Eclemma helped us learn more about at which points an exception was thrown in some of our tests.
+Lastly, we had learned that our previous tests didn’t cover all statements that we had previously had thought when throwing exceptions. EclEmma helped us learn more about at which points an exception was thrown in some of our tests.
 
 # 10 Comments/feedback on the lab itself
 
-Overall the lab was good. It provided an opportunity to understand coverage tools. It also provided a chance to gain a better knowledge of white box testing methods. Each group member was able to learn more about the principles the lab taught and get some experience using them.
-The lab document did feel a bit overwhelming as it was quite large. If it was possible to simplify the lab document it might be easier to focus the assignment on the most important aspects. That being said, it was still informative and did provide needed information and the diagrams did provide enough information to set up the processes required.
-When using the suggested coverage tools, it was found that some didn’t work well or aren’t supported anymore such as CodeCover. Having a bit more information on the coverage tools involving setup and use would have helped us to understand the process of understanding the tools used. Possibly having a tutorial about using a coverage tool would be very helpful to gain an initial understanding of them. We were able to look up tutorials and learn about them on our own though.
-While the lab could be improved it still gave us a chance to experiment with coverage tools, data flow graphs and the associated calculations. The lab was enjoyable and served to increase our comprehension of the topic.
+Overall, the assignment was good for our learning. It provided an opportunity to understand coverage tools. It also provided a chance to gain a better knowledge of white-box testing methods. Each group member was able to learn more about the principles the assignment taught and to gain some experience using them.
+The lab report did feel a bit overwhelming as it was quite large. If it was possible to simplify the lab document, it might be easier to focus the assignment on the most important aspects. That being said, it was still informative and did provide needed information and the diagrams did provide enough information to set up the processes required.
+When using the suggested coverage tools, it was found that some didn’t work well or aren’t supported anymore such as CodeCover. Having a bit more information on the coverage tools involving setup and use would have helped us to understand the process of understanding the tools used. Possibly having a tutorial about using a coverage tool would be very helpful to gain an initial understanding of them. We were able to look up tutorials and learn about them on our own.
+While the lab could be improved, it still gave us a chance to experiment with coverage tools, data flow graphs, and the associated calculations. The lab was enjoyable and served to increase our comprehension of the topic.
 
 # Appendix A: Full test suite of Assignment 3
 **SENG 438 Assignment 3 Test Designs**
