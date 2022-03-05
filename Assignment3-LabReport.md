@@ -239,7 +239,7 @@ Setting up the group work felt a bit more difficult in this assignment, as some 
 
 The condition coverage metric didn’t show up in any of the coverage tools available to us. We decided to focus on method coverage instead to have more information shown in our results. After this decision, we were able to make tests to meet the criteria of 90% statement coverage, 70% branch coverage, and 60% method coverage.
 
-Another interesting detail we noticed was that getCentralValue() in the range class has a defect in the source code and even with proper tests, we always get a failing test. Therefore, running the our tests will always result in one error originating from this method.
+Another interesting detail we noticed was that `getCentralValue()` in the Range class has a defect in the source code and even with proper tests, we always get a failing test. Therefore, running the our tests will always result in one error originating from this method.
 
 Lastly, we had learned that our previous tests didn’t cover all statements that we had previously had thought when throwing exceptions. EclEmma helped us learn more about at which points an exception was thrown in some of our tests.
 
