@@ -247,17 +247,17 @@ While the lab could be improved, it still gave us a chance to experiment with co
 
 <table>
   <tr>
-   <td>Test Case #
+   <td><b>Test Case #</b>
    </td>
-   <td>Method Under Test
+   <td><b>Method Under Test</b>
    </td>
-   <td>Inputs 
+   <td><b>Inputs </b>
    </td>
-   <td>Expected Output
+   <td><b>Expected Output</b>
    </td>
-   <td>Actual Output
+   <td><b>Actual Output</b>
    </td>
-   <td>Pass/Fail
+   <td><b>Pass/Fail</b>
    </td>
   </tr>
   <tr>
@@ -2390,6 +2390,20 @@ double data: 20.0
 
 
 <table>
+  <tr>
+   <td><b>Test Case #</b>
+   </td>
+   <td><b>Method Under Test</b>
+   </td>
+   <td><b>Inputs </b>
+   </td>
+   <td><b>Expected Output</b>
+   </td>
+   <td><b>Actual Output</b>
+   </td>
+   <td><b>Pass/Fail</b>
+   </td>
+  </tr>
   <tr>
    <td>5
    </td>
