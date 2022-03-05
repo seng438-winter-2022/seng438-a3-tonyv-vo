@@ -159,6 +159,20 @@ The pros and cons of both tools are shown below:
 
 **Final metrics: **
 
+Statement coverage:
+* Range: 90.5%
+
+* DataUtilities: 99.4%
+
+Branch coverage:
+* Range: 72.2%
+
+* DataUtilities: 79.2%
+
+Method coverage:
+* Range: 95.7%
+
+* DataUtilities: 100.0%
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
