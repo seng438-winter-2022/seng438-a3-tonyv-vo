@@ -42,9 +42,13 @@ After the completion of this assignment, we became more familiar with using cove
 
 This section includes the Data Flow diagrams and calculations for the following two methods: `constrain(double value)` from `Range` and `calculateColumnTotal(Values2D data, int column)` from `DataUtilities`.
 
-![constrain(double value) Data Flow Diagram](media/ConstrainDataFlow.png)
+![constrain(double value) Data Flow diagram](media/ConstrainDataFlow.png)
 
-![calculateColumnTotal(Values2D data, int column) Data Flow Diagram](media/calculateColumnTotalDataFlow_Updated.png)
+**Larger calculateColumnTotal(Values2D, int) Data Flow diagram:**
+
+![Larger constrain(double value) Data Flow diagram](media/ConstrainDataFlowDiagramDetailed.png)
+
+![calculateColumnTotal(Values2D data, int column) Data Flow diagram](media/calculateColumnTotalDataFlow_Updated.png)
 
 **Larger calculateColumnTotal(Values2D, int) Data Flow diagram:**
 
