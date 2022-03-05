@@ -242,9 +242,6 @@ When using the suggested coverage tools, it was found that some didn’t work we
 While the lab could be improved, it still gave us a chance to experiment with coverage tools, data flow graphs, and the associated calculations. The lab was enjoyable and served to increase our comprehension of the topic.
 
 # Appendix A: Full test suite of Assignment 3
-**SENG 438 Assignment 3 Test Designs**
-
-
 <table>
   <tr>
    <td><b>Test Case #</b>
