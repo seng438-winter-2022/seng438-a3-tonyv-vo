@@ -216,12 +216,19 @@ Each method has its advantages and disadvantages. In this assignment, we used th
 # 8 A discussion on how the team work/effort was divided and managed
 
 The assignment was simpler to follow than previous assignments and therefore it was easier to split up among our group members.
+
 Section 3.1 was completed as a team as it involved understanding the coverage tools and was important for each team member to understand. As a group, we went through the suggested testing tools such as EclEmma, CodeCover, Clover, etc. We didn’t spend a lengthy amount of time on this section but once we felt we understood the assignment we split up the work for the remaining two sections.
+
 Chace and Chad worked on the data flow graphs and calculations for the testing methods found in the “Manual data-flow coverage calculations” section of this document. This was section 3.2 in the assignment report document.
+
 Section 3.3 was initially taken by Tony. This section involved making sure all the tests we worked on in Assignment 2 met the minimum coverage criteria. He also determined which coverage metric we already had and which we needed to meet by writing more tests.
+
 Once we determined what our Assignment 2 tests gave us for coverage, we split up the methods we hadn’t already tested and wrote unit tests for them. We made sure to constantly check the coverage and once we reached the goals of 90% statement coverage, 70% branch coverage, and 60% method coverage in both the Range class and DataUtilities class, we stopped writing tests and reported our results in the assignment document.
+
 When writing the tests we made sure to keep the source code in mind so we could write tests that had the coverage we were looking for. We made sure to use white-box methods to create our new test cases.
+
 Most of our old tests met the coverage criteria needed but we were able to update some of the old test cases to maximise the coverage (as given at the bottom of [Appendix A](#appendix-a-full-test-suite-of-assignment-3)). 
+
 Although we worked separately for certain sections, the group spent a lot of time working on the assignment together to ensure we had a decent understanding of the whole assignment.
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
@@ -229,7 +236,9 @@ Although we worked separately for certain sections, the group spent a lot of tim
 This assignment contains a few difficulties for our group to overcome. The first was to figure out which coverage tool or tools we needed to use. All the members of our group were unfamiliar with the concept of coverage tools and needed to become acquainted with them before we could improve the coverage score. We did ultimately figure out which tools worked well for the assignment, which didn't work, and which were not functional or were outdated. It did provide us with the context to understand why these tools are important and why understanding them makes testing much easier.
 
 Setting up the group work felt a bit more difficult in this assignment, as some of the sections were smaller and more focused. It did help us to understand how to split up group work in an assignment with fewer sections and taught us the importance of having a good understanding of the work to be done. The diagrams were made by only two members as we only needed to make two of them. We were able to discuss the diagrams so that all group members understood them.
+
 The condition coverage metric didn’t show up in any of the coverage tools available to us. We decided to focus on method coverage instead to have more information shown in our results. After this decision, we were able to make tests to meet the criteria of 90% statement coverage, 70% branch coverage, and 60% method coverage.
+
 Another interesting detail we noticed was that getCentralValue() in the range class has a defect in the source code and even with proper tests, we always get a failing test. Therefore, running the our tests will always result in one error originating from this method.
 
 Lastly, we had learned that our previous tests didn’t cover all statements that we had previously had thought when throwing exceptions. EclEmma helped us learn more about at which points an exception was thrown in some of our tests.
@@ -237,8 +246,11 @@ Lastly, we had learned that our previous tests didn’t cover all statements tha
 # 10 Comments/feedback on the lab itself
 
 Overall, the assignment was good for our learning. It provided an opportunity to understand coverage tools. It also provided a chance to gain a better knowledge of white-box testing methods. Each group member was able to learn more about the principles the assignment taught and to gain some experience using them.
+
 The lab report did feel a bit overwhelming as it was quite large. If it was possible to simplify the lab document, it might be easier to focus the assignment on the most important aspects. That being said, it was still informative and did provide needed information and the diagrams did provide enough information to set up the processes required.
+
 When using the suggested coverage tools, it was found that some didn’t work well or aren’t supported anymore such as CodeCover. Having a bit more information on the coverage tools involving setup and use would have helped us to understand the process of understanding the tools used. Possibly having a tutorial about using a coverage tool would be very helpful to gain an initial understanding of them. We were able to look up tutorials and learn about them on our own.
+
 While the lab could be improved, it still gave us a chance to experiment with coverage tools, data flow graphs, and the associated calculations. The lab was enjoyable and served to increase our comprehension of the topic.
 
 # Appendix A: Full test suite of Assignment 3
