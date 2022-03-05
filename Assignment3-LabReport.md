@@ -44,7 +44,7 @@ This section includes the Data Flow diagrams and calculations for the following 
 
 ![constrain(double value) Data Flow Diagram](media/ConstrainDataFlow.png)
 
-![calculateColumnTotal(Values2D, int) Data Flow Diagram](media/calculateColumnTotalDataFlow.png)
+![calculateColumnTotal(Values2D data, int column) Data Flow Diagram](media/calculateColumnTotalDataFlow_Updated.png)
 
 **Larger calculateColumnTotal(Values2D, int) Data Flow diagram:**
 
