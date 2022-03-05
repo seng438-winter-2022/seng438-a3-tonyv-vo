@@ -12,7 +12,7 @@
 
 - [1 Introduction](#1-introduction)
 
-- [2 Manual data-flow coverage calculations for Constrain and CalculateColumnTotal methods](#2-manual-data-flow-coverage-calculations-for-constrain-and-calculatecolumntotal-methods)
+- [2 Manual data-flow coverage calculations for Constrain and CalculateColumnTotal methods](#2-manual-data-flow-coverage-calculations-for-the-constrain-and-calculatecolumntotal-methods)
 
 - [3 A detailed description of the testing strategy for the new unit test](#3-a-detailed-description-of-the-testing-strategy-for-the-new-unit-test)
 
@@ -34,49 +34,49 @@
 
 # 1 Introduction
 
-In this assignment, we were tasked with using the white-box coverage criteria technique to develop test cases in order to increase the coverage of the test suites we developed in the previous assignment. The same Java framework from the last assignment, JFreeChart, was used for the system under test(SUT), and coverage tools such as EclEmma and Clover were employed to calculate the statement, branch, and method coverage for our test suite. 
+In this assignment, we were tasked with using the white-box coverage criteria technique to develop test cases in order to increase the coverage of the test suites we developed in the previous assignment. The same Java framework from the last assignment, JFreeChart, was used for the System Under Test (SUT), and coverage tools such as EclEmma and Clover were employed to calculate the statement, branch, and method coverage for our test suite. 
 
 After the completion of this assignment, we became more familiar with using coverage tools to measure test suite adequacy and were able to modify our test cases to improve code coverage. We became more acquainted with the advantages and disadvantages of each of the coverage tools we used and grew in our understanding of data-flow coverage and the manual calculation of DU-pair coverage.
 
-# 2 Manual data-flow coverage calculations for Constrain and CalculateColumnTotal methods
+# 2 Manual data-flow coverage calculations for the constrain() and calculateColumnTotal() methods
 
-This section includes the Data Flow diagrams and calculations for the following two methods: `constrain(double value)` from `Range` and `calculateColumnTotal(Values2D, int)` from `DataUtilities`.
+This section includes the Data Flow diagrams and calculations for the following two methods: `constrain(double value)` from `Range` and `calculateColumnTotal(Values2D data, int column)` from `DataUtilities`.
 
 ![constrain(double value) Data Flow Diagram](media/ConstrainDataFlow.png)
 
 ![calculateColumnTotal(Values2D, int) Data Flow Diagram](media/calculateColumnTotalDataFlow.png)
 
-![Larger calculateColumnTotal(Values2D, int) Data Flow Diagram](media/DataFlowDiagramDetailed.jpg)
+**Larger calculateColumnTotal(Values2D, int) Data Flow diagram:**
+
+![Larger calculateColumnTotal(Values2D, int) Data Flow diagram](media/DataFlowDiagramDetailed.jpg)
 
 # 3 A detailed description of the testing strategy for the new unit test
 
-Our testing strategy was to use white-box testing to attempt to maximize the statement coverage, branch coverage, and method coverage of our unit tests from assignment 2 and new unit tests in our test suite. Our primary goal was to achieve a minimum of 90% statement coverage, 70% branch coverage, and 60% method coverage for each class under test. A secondary goal of ours was to achieve 100% statement coverage for our assignment 2 unit tests. We had modified our Assignment 2 tests and had achieved this goal through analyzing with the assistance of EclEmma and other coverage tools. Another secondary goal was to achieve 100% condition(method) coverage and around 80% branch coverage in DataUtilities which we were able to accomplish. Our strategy was to look at the source code with Eclemma to determine what statements, branches, and methods were missed. Eclemma highlights statements covered and notifies the user if a branch was missed and explains how many have been missed. We used this information as guidance to modify existing unit tests and create new unit tests. The guidance assisted us with deciding which inputs would satisfy each coverage metric percentage.
+Our testing strategy was to use white-box testing to attempt to maximize the statement coverage, branch coverage, and method coverage of our unit tests from Assignment 2 and new unit tests in our test suite that were not previously covered. Our primary goal was to achieve a minimum of 90% statement coverage, 70% branch coverage, and 60% method coverage for each class under test. A secondary goal of ours was to achieve 100% statement coverage for our Assignment 2 unit tests. We had modified our Assignment 2 tests and had achieved this goal through analyzing with the assistance of EclEmma and Clover. Another secondary goal was to achieve 100% method coverage and around 80% branch coverage in DataUtilities, which we were able to accomplish. Our strategy was to look at the source code with EclEmma to determine which statements, branches, and methods were missed. EclEmma highlights statements covered and notifies the user if a branch was missed and explains how many have been missed. We used this information as guidance to modify existing unit tests and create new unit tests. The guidance assisted us with deciding which inputs would satisfy each coverage metric percentage.
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
-5 test cases that increased the coverage which are listed by method and test case number as each method has multiple tests are the following:
+The following 5 test cases that increased the coverage are listed by method and test case number (as each method has multiple tests, see [Appendix A](#appendix-a-full-test-suite-of-assignment-3) for all test cases)
 
-1. getCumulativePercentage(KeyedValues data) - Test 92
+1. `getCumulativePercentage(KeyedValues data)` - Test 92
 
-	Test 92 creates a mock that behaves as a KeyedValues object. The mock sets a key as 1 and a value as 5 in an Item in a list with an index of 0. When called, it returns a KeyedValues object with the value at index 0 changed to a cumulative percentage which is 1.0. The method reaches multiple branches to achieve coverage through the use of its inputs. Two if statements are covered but their “hidden” else statements are not. The two branches in each for loop are covered. This becomes a total of 6 branches covered. The test has 75% branch coverage and covers 6/8 branches. It has 100% statement coverage and 100% methods coverage based on the metrics for the method using Eclemma.
+	Test 92 creates a mock that behaves as a KeyedValues object. The mock sets a key as 1 and a value as 5 in an Item in a list with an index of 0. When called, it returns a KeyedValues object with the value at index 0 changed to a cumulative percentage which is 1.0. The method reaches multiple branches to achieve coverage through the use of its inputs. Two if-statements are covered but their “hidden” else statements are not. The two branches in each for loop are covered. This becomes a total of 6 branches covered. The test has 75% branch coverage and covers 6/8 branches. It has 100% statement coverage and 100% methods coverage based on the metrics for the method using EclEmma.
 	
-	
-2. clone(double[][] array) - Test 91
+2. `clone(double[][] array)` - Test 91
 
-	Test 91 clones a 2D double array and returns a 2D double array. The test contributes 75% branch coverage and covers 3/4 branches, 100% statement coverage, and 100% method coverage. The if statement is covered but not the “hidden” else statement. Additionally, the two branches involved in the for loop are covered involving its condition. This is a total of ¾ branches as expected. This is based on the metrics for the method using Eclemma using a single test to perform such coverage.
+	Test 91 clones a 2D Double array and returns a 2D Double array. The test has 75% branch coverage and covers 3/4 branches, 100% statement coverage, and 100% method coverage. The if-statement is covered but not the “hidden” else statement. Additionally, the two branches involved in the for loop are covered involving its condition. This is a total of 3/4 branches as expected. This is based on the metrics for the method using EclEmma using a single test to assess such coverage.
 
+3. `expandToInclude(Range range, double value)` - Test 57
 
-3. expandToInclude (Range range, double value) - Test 57
+	Test 57 creates a Range from -10 to 0 and expands it to include the number 2 in the upper bound using Range.expandToInclude(range,2). It then compares this new Range to the Range (-10, 2). It checks one of the 6 paths through the function. This test avoids triggering any of the exceptions or going through the if-statement found in the source code. The test contributed 16.7% to branch coverage and 10.6% to statement coverage. This was calculated by removing the test from the test suite and calculating the difference from the total coverage of `expandToInclude(Range range, double value)` which was previously at 100% for all metrics.
 
-	Test 57 creates a range from -10 to 0 and expands it to include the number 2 in the upper bound using Range.expandToInclude(range,2); It then compares this new range to the range (-10, 2). It checks one of the 6 paths through the function. This test avoids triggering any of the exceptions or going through the if statement found in the source code. The test contributed 16.7% to branch coverage and 10.6% to statement coverage. This was calculated by removing the test from the test suite and calculating the difference from the total coverage of expandToInclude() which was previously at 100% for all metrics.
+4. `scale(Range base, double factor)` - Test 50
 
-4. scale (Range base, double factor) - Test 50
+	Test 50 creates a Range from -10 to 10 and scales it by 2 using `Range.scale(range,2)`; it then compares this new Range to the Range (-20, 20). It checks one of the 3 paths through the function. The “hidden” else statement is covered following the single if statement. This test avoids triggering any of the exceptions or going through the if-statement found in the source code. This test contributed 1/3 of the total coverage of the `scale` method.
 
-	Test 50 creates a range from -10 to 10 and scales it by 2 using Range.scale(range,2); it then compares this new range to the range (-20, 20). It checks one of the 3 paths through the function. The “hidden” else statement is covered following the single if statement. This test avoids triggering any of the exceptions or going through the if statement found in the source code. This test contributed ⅓ of the total coverage of the scale method.
+5. `constrain(double value)` - Test 102 
 
-5. constrain(double value) - Test 102 
-
-	Test 102 uses the already created Range of -100,000 to 100,000 and checks whether values sent as arguments that occur inside the range are also returned as the constrain value. In previous tests, the if(!contains(value)) statement is covered but not the hidden else statement after line 196 which is only covered when the value variable is within the range. This test sends a value within the range of -100,000 and 100,000 to check the hidden else statement thus increasing branch coverage. This test contributes ⅙ of the coverage of the constraint method.
+	Test 102 uses the already created Range of -100,000 to 100,000 and checks whether values sent as arguments that occur inside the Range are also returned as the constrain value. In previous tests, the `if(!contains(value))` statement is covered but not the hidden else statement after line 196 which is only covered when the value variable is within the range. This test sends a value within the range of -100,000 and 100,000 to check the hidden else statement thus increasing branch coverage. This test contributes 1/6 of the coverage of the `constrain(double value)` method.
 
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
@@ -113,7 +113,7 @@ DataUtilities:
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
-The two coverage tools used were Clover and EclEmma. We had tried others such as CodeCover but we were unsuccessful with our version of Eclipse. While we used both coverage tools to help with writing tests we ended up using EclEmma to report our metrics.
+The two coverage tools used were Clover and EclEmma. We had tried others such as CodeCover but we were unsuccessful with our version of Eclipse (Version: 2021-12 (4.22.0)). While we used both coverage tools to help with writing tests, we ended up using EclEmma to report our metrics.
 The pros and cons of both tools are shown below:
 
 <table>
@@ -144,18 +144,21 @@ The pros and cons of both tools are shown below:
 <p>
 - Ran nicely on Eclipse
 <p>
-- good colour coding for visuals 
+- Good colour coding for visuals 
 <p>
-- report generation
+- Report generation
 <p>
-- include/exclude 
+- Include/Exclude methods, classes, and packages
    </td>
-   <td>- Bar graphics were confusing and required some time and effort to understand what they were asking for
+   <td>- Bar graphics were confusing and required some time and effort to understand what they were presenting
 <p>
 - Had no condition coverage
    </td>
   </tr>
 </table>
+
+**Final metrics: **
+
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
@@ -205,11 +208,13 @@ Although we worked separately for certain sections, the group spent a lot of tim
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-	This lab contains a few difficulties for the group to overcome. The first was to figure out which coverage tool or tools we needed to use. All the members of our group were unfamiliar with the concept of coverage tools and needed to become acquainted with them before we could do much. We did ultimately figure out which tools worked well for the lab, which didn't work for it and which weren’t functional. It did provide us with the context to understand why these tools are important and why understanding them makes testing much easier.
+This lab contains a few difficulties for the group to overcome. The first was to figure out which coverage tool or tools we needed to use. All the members of our group were unfamiliar with the concept of coverage tools and needed to become acquainted with them before we could do much. We did ultimately figure out which tools worked well for the lab, which didn't work for it and which weren’t functional. It did provide us with the context to understand why these tools are important and why understanding them makes testing much easier.
+
 Setting up the group work felt a bit more difficult in this lab, as some of the sections were smaller and more focused. It did help us to understand how to split up group work in a lab with fewer sections and taught us the importance of having a good understanding of the work to be done. The diagrams were made by only two members as we only needed to make two of them. We were able to discuss the diagrams so that all group members understood them.
 The condition coverage metric didn’t show up in any of the coverage tools available to us. We decided to focus on method coverage instead to have more information shown in our results. After this decision, we were able to make tests to meet the criteria of  90% statement coverage, 70% branch coverage and 60% Method coverage.
 Another interesting detail we noticed was that getCentralValue() in the range class has a defect in the source code and even with good tests we always get a failing test.
-	Lastly, we had learned that our previous tests didn’t cover all statements that we had previously had thought when throwing exceptions. Eclemma helped us learn more about at which points an exception was thrown in some of our tests.
+
+Lastly, we had learned that our previous tests didn’t cover all statements that we had previously had thought when throwing exceptions. Eclemma helped us learn more about at which points an exception was thrown in some of our tests.
 
 # 10 Comments/feedback on the lab itself
 
